@@ -16,5 +16,9 @@
     > > npm install leaflet
   - Install React Leaflet
     > > npm install react-leaflet
-  - In public/index.html, import the leaflet CSS and JS modules.
-  - Add the basic Leaflet React components to App.js
+  - Install React Esri Leaflet (https://github.com/slutske22/react-esri-leaflet)
+    > > npm install react-esri-leaflet
+  - In public/index.html, import the Leaflet, and Esri Leaflet CSS and JS modules.
+  - Add the basic Leaflet React and Esri Leaflet React components to App.js
+  - Install dependencies for Esri Leaflet Vector
+    > > npm install esri-leaflet-vector
