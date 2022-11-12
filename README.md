@@ -22,3 +22,9 @@
   - Add the basic Leaflet React and Esri Leaflet React components to App.js
   - Install dependencies for Esri Leaflet Vector
     > > npm install esri-leaflet-vector
+  - Issue building at Vercel (dependency collision) => downgrade esri-leaflet-vector from 4.00 to 3.1.2
+
+- #### Outcome
+
+  - Pretty slow to render
+  - Abandoned project and moving onto using the package 'esri-loader' (https://github.com/Esri/esri-loader) or '@arcgis/webpack-plugin'
