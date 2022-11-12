@@ -27,4 +27,4 @@
 - #### Outcome
 
   - Pretty slow to render
-  - Abandoned project and moving onto using the package 'esri-loader' (https://github.com/Esri/esri-loader) or '@arcgis/webpack-plugin'
+  - Abandoned project and moving onto using the package '@arcgis/core' (https://www.npmjs.com/package/@arcgis/core'
