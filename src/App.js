@@ -19,54 +19,54 @@ function App() {
 
   const onClick = (e) => {
     console.log("click")
-    // const [lat, lng] = [e.latlng.lat, e.latlng.lng]
-    // const properties = e.sourceTarget.feature.properties
+    const [lat, lng] = [e.latlng.lat, e.latlng.lng]
+    const properties = e.sourceTarget.feature.properties
 
-    // setPopup(
-    //   <Popup position={[lat, lng]}>
-    //     <p>Municipio:{properties.NMUN}</p>
-    //     <p>
-    //       Renta neta media por persona:
-    //       {stringToLocaleNumber(properties.DATO1)}
-    //     </p>
-    //     <p>
-    //       Renta neta media por hogar:{stringToLocaleNumber(properties.DATO2)}
-    //     </p>
-    //     <p>
-    //       Poblacion con ingresos por unidad de consumo por debajo del 7.500
-    //       Euros:{stringToLocaleNumber(properties.DATO3)} %
-    //     </p>
-    //     <p>
-    //       Poblacion con ingresos por unidad de consumo por debajo 60% de la
-    //       mediana:{stringToLocaleNumber(properties.DATO4)} %
-    //     </p>
-    //     <p>
-    //       Poblacion con ingresos por unidad de consumo por encima 200% de la
-    //       mediana:{stringToLocaleNumber(properties.DATO5)} %
-    //     </p>
-    //     <p>
-    //       Poblacion con ingresos por unidad de consumo por debajo 60% de la
-    //       mediana:{stringToLocaleNumber(properties.DATO6)} %
-    //     </p>
-    //     <p>
-    //       Porcentaje de poblacion menor de 18 años:
-    //       {stringToLocaleNumber(properties.DATO7)} %
-    //     </p>
-    //     <p>
-    //       Porcentaje de poblacion de 65 y mas años:
-    //       {stringToLocaleNumber(properties.DATO8)} %
-    //     </p>
-    //     <p>Indice de Gini:{stringToLocaleNumber(properties.DATO9)}</p>
-    //   </Popup>
-    // )
+    setPopup(
+      <Popup position={[lat, lng]}>
+        <p>Municipio:{properties.NMUN}</p>
+        <p>
+          Renta neta media por persona:
+          {stringToLocaleNumber(properties.DATO1)}
+        </p>
+        <p>
+          Renta neta media por hogar:{stringToLocaleNumber(properties.DATO2)}
+        </p>
+        <p>
+          Poblacion con ingresos por unidad de consumo por debajo del 7.500
+          Euros:{stringToLocaleNumber(properties.DATO3)} %
+        </p>
+        <p>
+          Poblacion con ingresos por unidad de consumo por debajo 60% de la
+          mediana:{stringToLocaleNumber(properties.DATO4)} %
+        </p>
+        <p>
+          Poblacion con ingresos por unidad de consumo por encima 200% de la
+          mediana:{stringToLocaleNumber(properties.DATO5)} %
+        </p>
+        <p>
+          Poblacion con ingresos por unidad de consumo por debajo 60% de la
+          mediana:{stringToLocaleNumber(properties.DATO6)} %
+        </p>
+        <p>
+          Porcentaje de poblacion menor de 18 años:
+          {stringToLocaleNumber(properties.DATO7)} %
+        </p>
+        <p>
+          Porcentaje de poblacion de 65 y mas años:
+          {stringToLocaleNumber(properties.DATO8)} %
+        </p>
+        <p>Indice de Gini:{stringToLocaleNumber(properties.DATO9)}</p>
+      </Popup>
+    )
   }
 
   return (
     <MapContainer center={startLoc} zoom={13} scrollWheelZoom={true}>
-      {/* <VectorBasemapLayer
+      <VectorBasemapLayer
         name="ArcGIS:DarkGray"
         apikey={process.env.REACT_APP_ARCGIS_API_KEY}
-      /> */}
+      />
 
       <FeatureLayer
         url={MUNICIPIOS_URL}
